@@ -1,0 +1,120 @@
+body {
+    background: url(../admin/img/background.svg);
+    font-family: 'Roboto', sans-serif;
+}
+
+.login-box {
+    margin-top: 75px;
+    height: auto;
+    background: #35424870;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 80vh;
+    height: 60vh;
+    border-radius: 10px;
+    margin-left: 30%;
+    box-shadow: 20px 10px 20px 12px rgba(0, 0, 0, 0.16), 0 3px 10px 2px rgba(244, 2, 2, 0.23);
+}
+
+.login-key {
+    height: 100px;
+    font-size: 80px;
+    line-height: 100px;
+    background: linear-gradient(to bottom, #27EF9F, #0DB8DE);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.login-title {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #ECF0F5;
+    text-shadow: 20px 10px 20px 2px rgb(255, 0, 0);
+}
+
+.login-form {
+    margin-top: 25px;
+    text-align: center;
+}
+
+input[type=text] {
+    background-color: #ffffff;
+    border: none;
+    border-bottom: 1px solid #0DB8DE;
+    border-top: 0px;
+    border-radius: 10px;
+    font-weight: bold;
+    outline: none;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    color: #000000;
+}
+
+input[type=password] {
+    background-color: #ffffff;
+    border: none;
+    border-bottom: 1px solid #0DB8DE;
+    border-top: 0px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    outline: 0;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.form-group {
+    margin-bottom: 40px;
+    outline: none;
+}
+
+label {
+    margin-bottom: 0px;
+}
+
+.form-control-label {
+    font-size: 16px;
+    color: #6C6C6C;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 10px;
+}
+
+.login-button{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.login-button button{
+    width: 180px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    background: linear-gradient(to bottom, #1d9666, #10859f);
+
+    transition: .5s ease-in-out;
+}
+.login-button button:hover{
+    margin: 5px;
+    background: linear-gradient(to bottom, #10859f, #1d9666);
+}
+.login-text{
+    width: 70vh;
+    height: 20px;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    margin: 20px 35px;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+}
