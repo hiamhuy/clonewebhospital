@@ -2,7 +2,7 @@
     session_start();
     include("connection.php");
     include("function.php");
-    include("delete.php");
+    // include("delete.php");
 
 
     $user_data = checkLogin($conn);
@@ -19,7 +19,7 @@
         $numberIndividual = $_POST['numberIndividual'];
         $name = $_POST['name'];
         $numberPhone = $_POST['numberPhone'];
-        $majors = $_POST['majors'];
+        $majors = $_POST['majors']; 
         $info = $_POST['info'];
         $queryAdd = "INSERT INTO information (image, numberIndividual, name, numberPhone, majors, info) 
         VALUES ('$image', '$numberIndividual', '$name', '$numberPhone', '$majors', '$info')";
@@ -99,41 +99,6 @@
         </div>
     </form>
     
-    <form action="" method="get" class="info-staff" id="form-edit-staff"> 
-        <div class="form__edit__staff">
-            <div class="close" id="close-edit-staff">
-                <span><i class="fa-solid fa-xmark"></i></span>
-            </div>
-            <h2>EDIT PROFILE</h2>
-            
-            <div class="idNumber">
-                    <input type="hidden" name = "id" value="<?php echo $row_up['idNumber'];?>" id="idNumber">
-            </div>
-            <div class="avatar">
-                <input type="file" id="avatar" name="avatar"accept="image/png, image/jpeg">
-            </div>
-            <div class="id">
-                <input type="text" id="id" placeholder="Nhập mã số (*)" value="<?php echo $row_up['numberIndividual'];?>">
-            </div>
-            <div class="name">
-                <input type="text" id="name" placeholder="Nhập họ tên (*)" required=" " value="<?php echo $row_up['name']; ?>">
-            </div>
-            <div class="number">
-                <input type="number" id="number" placeholder="Nhập số điện thoại (*)"required=" " value="<?php echo $row_up['numberPhone']; ?>">
-            </div>
-            <div class="khoa">
-                <input type="text" id="khoa" placeholder="Nhập khoa (*)"required=" " value="<?php echo $row_up['majors']; ?>">
-            </div>
-            <div class="info">
-                <textarea name="info" id="info" cols="30" rows="3" placeholder="Nhập thông tin chi tiết..." ><?php echo $row_up['info']; ?></textarea>
-            </div>
-            <div class="btn-btn-add">
-                <button id="btn-add-new" name ="btnEditStaff">EDIT PROFILE
-                </button>
-            </div>
-        </div>
-    </form>
-
     <header class="header">
         <h2>ADMIN</h2>
         <nav class="navbar">
@@ -212,7 +177,7 @@
                                         <?php echo $i++; ?>
                                     </td>
                                     <td>
-                                        <img src="img/<?php echo $row['image']?>" alt="">
+                                        <img src="img/<?php echo $row['image'];?>" alt="">
                                     </td>
                                     <td>
                                         <?php echo $row['idNumber']; ?>
@@ -233,10 +198,10 @@
                                         <?php echo $row['info']; ?>
                                     </td>  
                                     <td>
-                                    <a href="#form-edit-staff&idNumber=<?php echo $row['idNumber'];?>" id="btn-edit-staff">
+                                    <a href="edit.php?id=<?php echo $row['idNumber'];?>" id="btn-edit-staff">
                                         <span><i class="fa-solid fa-user-pen"></i></span> 
                                     </a>
-                                    <a onclick="return confirm ('Bạn chắc chắn xóa <?php echo $row['name'] ?> ?')" href="index.php?delete&id=<?php echo $row['idNumber'];?>" id="btn-del-staff">
+                                    <a onclick="return confirm ('Bạn chắc chắn xóa <?php echo $row['name']; ?> ?')" href="delete.php?id=<?php echo $row['idNumber'];?>" id="btn-del-staff">
                                         <span>
                                         <i class="fa-solid fa-trash-can"></i>
                                         </span>
@@ -275,21 +240,21 @@
                                 <p><?php echo $j++; ?></p>
                             </td>
                             <td>
-                                <p><?php echo $row['id'] ?></p>
+                                <p><?php echo $row['id']; ?></p>
                             </td>
                             <td>
-                                <p><?php echo $row['title'] ?></p>
+                                <p><?php echo $row['title']; ?></p>
                             </td>
                             <td>
                                 <p>
-                                    <?php echo $row['content']?>
+                                    <?php echo $row['content'];?>
                                 </p>
                             </td>
                             <td>
-                                <a href="#form-edit-news" id="btn-edit-news">
+                                <a href="edit_news.php?id=<?php echo $row['id'];?>" id="btn-edit-news">
                                 <span><i class="fa-solid fa-user-pen"></i></span> 
                                 </a>
-                                <a onclick="return confirm ('Bạn chắc chắn xóa <?php echo $row['title'] ?> ?')" href="index.php?delete&idNews=<?php echo $row['id'];?>" id="btn-del-news">
+                                <a onclick="return confirm ('Bạn chắc chắn xóa <?php echo $row['title'] ?> ?')" href="delete.php?idNews=<?php echo $row['id'];?>" id="btn-del-news">
                                     <span>
                                     <i class="fa-solid fa-trash-can"></i>
                                     </span> 

@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&family=Shippori+Antique+B1&display=swap');
+
+:root{
+    --background: linear-gradient(to bottom,rgb(151, 160, 235),rgb(56, 62, 112));
+    --black: rgb(3, 3, 3);
+    --text-shadow: rgb(215, 92, 92);
+    --content: linear-gradient(to bottom,rgba(246, 247, 250, 0.437),rgba(217, 218, 223, 0.749));
+}
+*{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Shippori Antique B1', sans-serif;
+}
+html{
+    font-size: 16px;
+    list-style: none;
+    text-decoration: none;
+    transition: all 0.2s linear;
+    overflow: hidden;
+    /* user-select: none; */
+}
+body{
+    margin: 0 auto;
+    background:rgba(184, 179, 179, 0.76);
+}
+.main{
+    position: relative;
+    display: flex;
+    justify-content:center;
+    text-align: center;
+}
+.main .nav-main{
+    width: calc(5000px - 50px);
+    margin: 0 auto;
+    height: 50px;
+    background:rgb(222, 224, 233);
+    
+}
+.main .nav-main .img{
+    width: 35px;
+    height: 35px;
+    padding: 5px 20px 0px 0px;
+    border-radius: 50%;
+    float: right;
+    
+}
+.main .nav-main .img img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid #2f20d5;
+    background:rgb(101, 152, 242);
+}
+.main .name{
+    float: right;
+    padding: 12px 10px 0 0;
+}
+.main .name p{
+    font-size: 16px;
+}
+/*custom form edit*/
+#form-edit-news{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background:rgba(192, 190, 190, 0.377);
+    align-items: center;
+    padding: 0 18px;
+    justify-content: center;
+    text-align: center;
+}
+#form-edit-news .form__edit__staff{
+    width: 100vh;
+    height: 90vh;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background:#fff;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(70, 69, 69, 0.1);
+}
+#form-edit-news .title input#title
+{
+    border: 1px solid rgb(9, 35, 207);
+    margin: 0 auto;
+    padding: 10px;
+
+    min-width: 320px;
+    height: 20px;
+    border-radius: 10px;
+    opacity: .8;
+    outline: none;
+}
+#form-edit-news .content{
+    margin: 0;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+#form-edit-news .content textarea#content{
+    border: 1px solid rgb(9, 35, 207);
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 60%;
+    min-width: 320px;
+    min-height: 60px;
+    border-radius: 10px;
+    opacity: .8;
+    outline: none;
+}
+
+.btn-btn-add{
+    width: 150px;
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.btn-btn-add button{
+    display: block;
+}
+.btn-btn-add button#btn-add-new{
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background:rgb(9, 35, 207);
+    color: #fff;
+    transition: all 0.5s ease-out;
+}
+.btn-btn-add button#btn-add-new span {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 10px 1px 10px 10px;
+}
+.btn-btn-add button#btn-add-new:hover{
+    background: none;
+    border: 2px solid rgb(9, 35, 207);
+    margin-right: 10px;
+    color:rgb(9, 35, 207);
+}
+/*end*/
+h2{
+    padding: 10px;
+}
